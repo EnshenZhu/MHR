@@ -21,3 +21,4 @@ if __name__ == "__main__":
     this_vertices, this_skeleton_state=mhr_tester()
     print(this_vertices)
     print(this_skeleton_state)
+    print("end")
