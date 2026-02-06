@@ -25,8 +25,8 @@ print(f"Running on {device}.")
 def _prepare_input_data(batch_size: int) -> torch.Tensor:
     identity_coeffs = 0.8 * torch.randn(batch_size, 45).to(device)
     model_parameters = 0.2 * (torch.rand(batch_size, 204) - 0.5).to(device)
-    # face_expr_coeffs = 0.3 * torch.randn(batch_size, 72).to(device)
-    face_expr_coeffs = 0 * torch.randn(batch_size, 72).to(device) # disable face expression variation
+    face_expr_coeffs = 0.1 * torch.randn(batch_size, 72).to(device)
+    # face_expr_coeffs = 0 * torch.randn(batch_size, 72).to(device) # disable face expression variation
 
     # report the all coefficient values
     # print(f"Identity coeffs: {identity_coeffs}")
