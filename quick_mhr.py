@@ -2,8 +2,11 @@ import torch
 from mhr.mhr import MHR
 
 def mhr_tester():
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f"Running on {device}.")
+
     # Load MHR model (LOD 1, on CPU)
-    mhr_model = MHR.from_files(device=torch.device("cpu"), lod=1)
+    mhr_model = MHR.from_files(device=device, lod=1)
 
     # Define parameters
     batch_size = 2
