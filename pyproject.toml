@@ -59,6 +59,7 @@ pymomentum = ">=0.1.90"
 python = ">=3.12.12,<3.14"
 pixi-pycharm = ">=0.0.10,<0.0.11"
 pytorch-gpu = "*"
+open3d = "*"
 
 [tool.pixi.feature.py312.dependencies]
 python = "3.12.*"

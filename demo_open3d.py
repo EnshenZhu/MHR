@@ -9,7 +9,7 @@ The original ``demo.py`` uses the ``trimesh`` library to create a mesh from
 the vertices returned by the MHR model and then writes it to disk.  Open3D
 provides a convenient ``draw_geometries`` function which takes a list of
 geometry objects (point clouds, triangle meshes or images) and renders them
-together【732350169453825†L68-L75】.  To construct an Open3D ``TriangleMesh`` you
+together【732350169453825†L68-L75】.  To construct an Open3D ``TriangleMesh`,` you
 pass the vertex positions and face indices as ``Vector3dVector`` and
 ``Vector3iVector`` respectively【535057006977722†L980-L990】.  Calling
 ``compute_vertex_normals()`` on the mesh computes per–vertex normals for
@@ -41,7 +41,7 @@ def _prepare_input_data(batch_size: int) -> tuple[torch.Tensor, torch.Tensor, to
     """
     identity_coeffs = 0.8 * torch.randn(batch_size, 45).cpu()
     model_parameters = 0.2 * (torch.rand(batch_size, 204) - 0.5).cpu()
-    face_expr_coeffs = 0.3 * torch.randn(batch_size, 72).cpu()
+    face_expr_coeffs = 0.05 * torch.randn(batch_size, 72).cpu()
     return identity_coeffs, model_parameters, face_expr_coeffs
 
 
